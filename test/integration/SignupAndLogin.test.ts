@@ -3,7 +3,7 @@ import { SignupUsecase } from "@/application/usecase/SignupUsecase";
 import { UserRepositoryMemory } from "@/infra/repository/UserRepositoryMemory";
 import { GenerateTokenAuthJwt } from "@/infra/service/GenerateTokenAuthJwt";
 
-test("Deve ser possível efetuar um login!", async function () {
+test("Deve ser possível efetuar um signup e login!", async function () {
     const userRepository = new UserRepositoryMemory();
     const signup = new SignupUsecase(userRepository);
     const generateToken = new GenerateTokenAuthJwt();
